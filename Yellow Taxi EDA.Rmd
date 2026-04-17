@@ -16,9 +16,7 @@ library(arrow)
 library(dplyr)
 library(tidyr)
 
-#files <- choose.files()
-
-files <- list.files("C:/Users/sheng/Downloads", pattern = "\\.parquet$", full.names = TRUE)
+files <- choose.files()
 
 basename(files) #making sure the correct files are grabbed.
 
@@ -457,8 +455,7 @@ for (col in group_cols) {
 ```{r}
 
 #Getting Borough_Zone
-#Borough_Zone = read.csv(file.choose(), header = TRUE, stringsAsFactors = TRUE)
-Borough_Zone <- read.csv("C:/Users/sheng/Downloads/taxi_zone_lookup.csv")
+Borough_Zone = read.csv(file.choose(), header = TRUE, stringsAsFactors = TRUE)
 
 
 head(Borough_Zone)
